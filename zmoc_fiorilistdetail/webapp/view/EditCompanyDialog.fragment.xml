@@ -1,0 +1,26 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+<Dialog id="companyEditDialog" stretch="false" resizable="true" draggable="true" title="{= ${Carrid} ? ${i18n>editar_comp_aerea_title} : ${i18n>nova_comp_aerea_title} }" >
+<content>
+    <f:SimpleForm id="companyDetailForm" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+        <f:content>
+            <Label id="companyDetailLabelCarrid"   labelFor="companyDetailLCarrid" text="{i18n>CompanyIDColon}" visible="{editCompanyModel>/isNew}"/>
+            <Input id="companyDetailLCarrid" type="Text" value="{Carrid}" visible="{editCompanyModel>/isNew}" />
+            <Label id="companyDetailLabelCarrname" labelFor="companyDetailLCarrname" text="{i18n>formCompanyName}" />
+            <Input id="companyDetailLCarrname" type="Text" value="{Carrname}" />
+            <Label id="companyDetailLabelCurrcode" labelFor="companyDetailLCurrcode" text="{i18n>formCurrCode}" />
+            <Input id="companyDetailLCurrcode" type="Text" value="{Currcode}" />
+            <Label id="companyDetailLabelUrl" labelFor="companyDetailLUrl" text="{i18n>formUrl}" />
+            <Input id="companyDetailLUrl" type="Text" value="{Url}" />
+        </f:content>
+     </f:SimpleForm>
+</content>
+<buttons>
+    <Button id="companyButtonSave" text="{i18n>salvar_btn}" type="Emphasized" press=".onCompanyButtonSavePress" />
+    <Button id="companyButtonCancel" text="{i18n>voltar_txt}" type="Default" press=".onCompanyButtonCancelPress" />
+    <Button id="companyButtonDelete" text="{i18n>delete_txt}" type="Reject" press=".onCompanyButtonDeletePress" visible="{= !${editCompanyModel>/isNew}}" />
+</buttons>
+</Dialog>
+</core:FragmentDefinition>

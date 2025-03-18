@@ -1,0 +1,28 @@
+<mvc:View controllerName="moovi.m06a03.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <l:VerticalLayout width="100%" id="vLayout" class="sapUiContentPading" binding="{companyModel>/ScarrSet}">
+            <Text id="txtHeader" text=""></Text>
+            <Text id="txtTitle" text="Companhia Aérea"></Text>
+            <Text id="txtCarrid" text="{companyModel>Carrid}"></Text>
+            <Text id="txtCarrname" text="{companyModel>Carrname}"></Text>
+            <Text id="txtCurrcode" text="{companyModel>Currcode}"></Text>
+            <Text id="txtUrl" text="{companyModel>Url}"></Text>
+            <Text id="txtFooter" text=""></Text>
+        </l:VerticalLayout >
+        <l:VerticalLayout width="100%" id="vLayoutJS" class="sapUiContentPading">
+            <Text id="txtHeaderJS" text=""></Text>
+            <Text id="txtTitleJS" text="Companhia Aérea"></Text>
+            <Text id="txtCarridJS" text="{companyModel>Carrid}"></Text>
+            <Text id="txtCarrnameJS" text="{companyModel>Carrname}"></Text>
+            <Text id="txtCurrcodeJS" text="{companyModel>Currcode}"></Text>
+            <Text id="txtUrlJS" text="{companyModel>Url}"></Text>
+            <Text id="txtFooterJS" text=""></Text>
+        </l:VerticalLayout >
+
+        </content>
+    </Page>
+</mvc:View>

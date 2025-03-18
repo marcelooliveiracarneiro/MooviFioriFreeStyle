@@ -1,0 +1,23 @@
+<mvc:View controllerName="moovi.m08a01.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <List id="spfliList" items="{/SpfliSet}" headerText="{i18n>spfliList_headerText}">
+            <ObjectListItem id="spfliListItem" title="{Cityfrom} {i18n>spfliListItem_toText} {Cityto}" type="Active" 
+                icon="{ 
+                    path: 'Fltime',
+                    formatter: '.formatter.setIconsStatusFltime'
+                }">
+                <firstStatus>
+                    <ObjectStatus id="spfliListItemStatus" text="{Fltime}" 
+                        state="{= ${Fltime} > 300 ? 'Error' : 'Success' }">
+                    </ObjectStatus>
+                </firstStatus>
+                <ObjectAttribute id="spfliListItemCarrid" text="{Carrid}"></ObjectAttribute>
+                <ObjectAttribute id="spfliListItemConnid" text="{Connid}"></ObjectAttribute>
+            </ObjectListItem>
+        </List>
+        </content>
+    </Page>
+</mvc:View>

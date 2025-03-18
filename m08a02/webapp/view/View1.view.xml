@@ -1,0 +1,23 @@
+<mvc:View controllerName="moovi.m08a02.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"> 
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <f:GridList id="scarrGridList"
+			headerText="{i18n>scarrList_headerText}"
+			items="{/ScarrSet}">
+			<f:GridListItem id="scarrGridListItem" class="myCustomListSize">
+				<VBox id="scarrGridListItemVBox" class="sapUiSmallMargin">
+					<layoutData>
+						<FlexItemData growFactor="1" shrinkFactor="0" />
+					</layoutData>
+
+					<Title id="scarrGridListItemCarrname" text="{Carrname}" wrapping="true" class="myCustomTitle" />
+					<Label id="scarrGridListItemCarrid" text="{Carrid}" wrapping="true" />
+				</VBox>
+			</f:GridListItem>
+		</f:GridList>        
+        </content>
+    </Page>
+</mvc:View>

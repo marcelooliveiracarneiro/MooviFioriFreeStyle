@@ -1,0 +1,181 @@
+<mvc:View controllerName="moovi.zmoc_fiorilistdetail.controller.FlightDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    >
+    <Page id="page" title="{i18n>flightPageTitle} {Connid}" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+        <VBox id="flightDetailVBox" class="sapUI5SmallMargin">
+            <f:Form id="flightDetailForm" editable="true">
+                <f:title>
+                    <core:Title id="flightDetailFromTitle" text="{i18n>flightDetailFromTitle}"></core:Title>
+                </f:title>
+                <f:layout>
+                <f:ResponsiveGridLayout id="flightDetailGridLayout"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="-1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="flightDetailFromFormContainer">
+                        <f:formElements>
+                            <f:FormElement id="flightDetailConnidFormElement" label="{i18n>flightDetailConnidLabel}"  >
+                                <f:fields>
+                                    <Input id="flightDetailConnidInput" value="{Connid}" enabled="{editFlightModel>/isNew}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailCountryfrFormElement" label="{i18n>flightDetailCountryfrLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailCountryfrInput" value="{Countryfr}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailCityfromFormElement" label="{i18n>flightDetailCityfromLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailCityfromInput" value="{Cityfrom}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailAirpfromFormElement" label="{i18n>flightDetailAirpfromLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailAirpfromInput" value="{Airpfrom}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+
+            </f:Form>
+            <f:Form id="flightDetailTo" editable="true">
+                <f:title>
+                    <core:Title id="flightDetailToTitle" text="{i18n>flightDetailToTitle}"></core:Title>
+                </f:title>
+                <f:layout>
+                <f:ResponsiveGridLayout id="flightDetailToGridLayout"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="-1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="flightDetailToFormContainer">
+                        <f:formElements>
+                            <f:FormElement id="flightDetailCountrytoFormElement" label="{i18n>flightDetailCountrytoLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailCountrytoInput" value="{Countryto}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailCitytoFormElement" label="{i18n>flightDetailCitytoLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailCitytoInput" value="{Cityto}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailAirptoFormElement" label="{i18n>flightDetailAirptoLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailAirptoInput" value="{Airpto}" ></Input>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+
+            </f:Form>
+            <f:Form id="flightDetailInfo" editable="true">
+                <f:title>
+                    <core:Title id="flightDetailInfoTitle" text="{i18n>flightDetailInfoTitle}"></core:Title>
+                </f:title>
+                <f:layout>
+                <f:ResponsiveGridLayout id="flightDetailInfoGridLayout"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="-1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false"
+                />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer id="flightDetailInfoFormContainer">
+                        <f:formElements>
+                            <f:FormElement id="flightDetailFltimeFormElement" label="{i18n>flightDetailFltimeLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailFltimeInput" type="Number" value="{path: 'Fltime', type: 'sap.ui.model.odata.type.Int32'}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailDeptimeFormElement" label="{i18n>flightDetailDeptimeLabel}">
+                                <f:fields>
+                                    <TimePicker id="flightDetailDeptimeInput" value="{Deptime}" valueFormat="HHmmss" displayFormat="HH:mm:ss" maskMode="On" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailArrtimeFormElement" label="{i18n>flightDetailArrtimeLabel}">
+                                <f:fields>
+                                    <TimePicker id="flightDetailArrtimeInput" value="{Arrtime}" valueFormat="HHmmss" displayFormat="HH:mm:ss" maskMode="On" />                                
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailDistanceFormElement" label="{i18n>flightDetailDistanceLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailDistanceInput" value="{Distance}" />
+                                    <Select id="flightDetailDistidSelect" selectedKey="{Distid}">
+                                        <core:Item text="Milhas" key="MI"></core:Item>
+                                        <core:Item text="KM" key="KM"></core:Item>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailFltypeFormElement" label="{i18n>flightDetailFltypeLabel}">
+                                <f:fields>
+                                    <Select id="flightDetailFltypeSelect" selectedKey="{Fltype}">
+                                        <core:Item text="Regular" key=""></core:Item>
+                                        <core:Item text="Fretado" key="X"></core:Item>
+                                    </Select>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement id="flightDetailPeriodFormElement" label="{i18n>flightDetailPeriodLabel}">
+                                <f:fields>
+                                    <Input id="flightDetailPeriodInput" value="{Period}" />
+                                </f:fields>
+                            </f:FormElement>
+
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+
+            </f:Form>
+        </VBox>
+        </content>
+        <footer>
+            <OverflowToolbar id="companyDetailFooterToolbar">
+                <ToolbarSpacer />
+                <Button id="buttonSave" text="Salvar" type="Accept" press="onButtonSavePress" />
+                <Button id="buttonDelete" text="Excluir" type="Reject" press="onButtonDeletePress" visible="{= !${editFlightModel>/isNew}}" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

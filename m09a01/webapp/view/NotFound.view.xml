@@ -1,0 +1,19 @@
+<mvc:View controllerName="moovi.m09a01.controller.NotFound"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+
+<MessagePage id="notFoundMessagePage"
+    title="{i18n>notFound.title}"
+    text="{i18n>notFound.text}"
+    description="{i18n>notFound.description}"
+    icon="{i18n>notFound.icon}"
+/>     
+
+
+        </content>
+    </Page>
+
+
+</mvc:View>

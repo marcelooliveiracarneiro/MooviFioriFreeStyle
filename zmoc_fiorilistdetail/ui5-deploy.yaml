@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: moovi.zmoc_fiorilistdetail
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: MOOVI_S4
+          url: https://ndc-srvhana.opus-idc.com.br:8100
+        app:
+          name: ZMOC_LISTDETAIL
+          package: ZMOC_FIORIFREESTYLE
+          transport: S4HK904852

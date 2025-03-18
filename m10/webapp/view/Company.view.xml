@@ -1,0 +1,21 @@
+<mvc:View controllerName="moovi.m10.controller.Company"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <List id="companyList" items="{/ScarrSet}" headerText="{i18n>companyList_headerText}">
+        <headerToolbar>
+            <OverflowToolbar id="companyListToolbar">
+                <Title id="companyListToolbarTitle" text="{i18n>companyList_headerText}" level="H2" />
+                <ToolbarSpacer />
+                <Button id="buttonCreate" icon="sap-icon://create" text="Novo" type="Accept" press="onButtonCreatePress" />
+            </OverflowToolbar>
+        </headerToolbar>
+            <ObjectListItem id="companyListItem" title="{Carrname}" type="Active" press=".onCompanyPress">
+                <ObjectAttribute id="companyListItemUrl" text="{Url}"></ObjectAttribute>
+                <ObjectAttribute id="companyListItemCurrcode" text="{Currcode}"></ObjectAttribute>
+            </ObjectListItem>
+        </List>
+        </content>
+    </Page>
+</mvc:View>

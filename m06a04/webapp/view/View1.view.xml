@@ -1,0 +1,22 @@
+<mvc:View controllerName="moovi.m06a04.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+
+        <List id="companyListJS" headerText="{i18n>company_list_header_txt}">
+        </List>
+
+<!--
+
+        <List id="companyList" items="{/ScarrSet}" headerText="{i18n>company_list_header_txt}">
+            <ObjectListItem id="companyListItem" title="{Carrname}">
+                <ObjectAttribute id="companyListItemUrl" text="{Url}"></ObjectAttribute>
+                <ObjectAttribute id="companyListItemCurrcode" text="{Currcode}"></ObjectAttribute>
+            </ObjectListItem>
+        </List>
+-->
+
+        </content>
+    </Page>
+</mvc:View>

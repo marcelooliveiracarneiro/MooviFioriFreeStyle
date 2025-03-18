@@ -1,0 +1,11 @@
+<mvc:View controllerName="moovi.m06a02.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Input id="companyInput" value="{companyModel>/ScarrSet/Carrname}"></Input>
+            <Input id="companyInput2"></Input>
+        </content>
+    </Page>
+</mvc:View>
+

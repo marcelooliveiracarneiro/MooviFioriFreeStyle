@@ -1,0 +1,33 @@
+<mvc:View controllerName="moovi.m09a01.controller.CompanyDetail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    busyIndicatorDelay="0"
+    >
+    <Page id="page" title="{i18n>titleCompanyDetail} {CarrName}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Panel id="companyDetailPanel" width="auto" class="sapUiResponsiveMargin sapUiNoContentPadding">
+                <headerToolbar>
+                    <Toolbar id="companyDetailToolbar">
+                        <Title id="companyDetailToolbarTitle" text="{i18n>CompanyID} {Carrid}" level="H2"/>
+                        <ToolbarSpacer />
+                    </Toolbar>
+                </headerToolbar>
+                <content>
+                    <f:SimpleForm id="companyDetailForm" editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+                        <f:content>
+                            <Label id="companyDetailLabelCarrid" text="{i18n>labelCarrid}" />
+                            <Input id="companyDetailLCarrid" type="Text" value="{Carrid}" />
+                            <Label id="companyDetailLabelCarrname" text="{i18n>labelCarrname}" />
+                            <Input id="companyDetailLCarrname" type="Text" value="{Carrname}" />
+                            <Label id="companyDetailLabelCurrcode" text="{i18n>labelCurrcode}" />
+                            <Input id="companyDetailLCurrcode" type="Text" value="{Currcode}" />
+                            <Label id="companyDetailLabelUrl" text="{i18n>labelUrl}" />
+                            <Input id="companyDetailLUrl" type="Text" value="{Url}" />
+                        </f:content>
+                    </f:SimpleForm>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,9 @@
+/* Enter your custom styles here */
+.myCustomStyle .myCustomTitle {
+    font-weight: bold;
+}
+
+.myCustomStyle .myCustomListSize {
+    padding: 1rem;
+    cursor: pointer;
+}

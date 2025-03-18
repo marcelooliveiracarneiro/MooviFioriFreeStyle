@@ -1,0 +1,15 @@
+<mvc:View controllerName="moovi.m07a01.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <SearchField id="searchFieldCompany" search="onSearchFieldCompany"></SearchField>
+        <List id="companyList" items="{path: '/ScarrSet', sorter: {path: 'Carrname', descending: true} }" headerText="{i18n>companyList_headerText}">
+            <ObjectListItem id="companyListItem" title="{Carrname}">
+                <ObjectAttribute id="companyListItemUrl" text="{Url}"></ObjectAttribute>
+                <ObjectAttribute id="companyListItemCurrcode" text="{Currcode}"></ObjectAttribute>
+            </ObjectListItem>
+        </List>
+        </content>
+    </Page>
+</mvc:View>
