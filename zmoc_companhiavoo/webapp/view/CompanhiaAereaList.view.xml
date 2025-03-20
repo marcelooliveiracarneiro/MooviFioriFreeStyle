@@ -1,0 +1,21 @@
+<mvc:View controllerName="moovi.zmoccompanhiavoo.controller.CompanhiaAereaList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <List id="companhiaAereaList" items="{/ScarrSet}" headerText="{i18n>companhiaAereaListHeaderText}">
+            <headerToolbar>
+                <OverflowToolbar id="companhiaAereaListToolbar">
+                    <Title id="companhiaAereaListToolbarTitle" text="{i18n>companhiaAereaListHeaderText}" level="H2" />
+                    <ToolbarSpacer />
+                    <Button id="buttonCreate" icon="sap-icon://create" text="Novo" type="Accept" press="onButtonCreatePress" />
+                </OverflowToolbar>
+            </headerToolbar>
+            <ObjectListItem id="companhiaAereaListItem" title="{Carrname}" type="Navigation" press=".onCompanyPress">
+                <ObjectAttribute id="companhiaAereaListItemUrl" text="{Url}"></ObjectAttribute>
+                <ObjectAttribute id="companhiaAereaListItemCurrcode" text="{Currcode}"></ObjectAttribute>
+            </ObjectListItem>
+        </List>
+        </content>
+    </Page>
+</mvc:View>
